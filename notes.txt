@@ -40,6 +40,10 @@ how to create component?
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-class SignupComponent{
+export class SignupComponent {
+    
+    constructor(){
+
+    }
 
 }
