@@ -1,0 +1,45 @@
+which component is the bootstrap component in angular ? 
+parent component? 
+default component? 
+AppComponent 
+
+
+what is component? 
+component is a class , which use to write logic like your servlet , 
+it connectes with three more files. 
+4 file 
+1) login.component.ts  : logic
+2) login.component.html : view 
+3) login.component.css : design 
+4) login.component.spec.ts : test 
+
+ng generate component signup 
+ng g c login 
+
+web.xml -> regi , url 
+app.module.ts -> 
+            1)  component
+            2)  lib , module
+            3)  bootstrap 
+            4) provider : service , iterceptor , 
+
+app-routing.module.ts 
+        component url mapping 
+
+component ? 
+
+how ? 
+which is view? 
+which is design?
+
+
+how to create component? 
+
+@Component({
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
+})
+class SignupComponent{
+
+}
