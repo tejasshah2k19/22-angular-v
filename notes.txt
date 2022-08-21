@@ -1,3 +1,5 @@
+type script ==> oop 
+
 which component is the bootstrap component in angular ? 
 parent component? 
 default component? 

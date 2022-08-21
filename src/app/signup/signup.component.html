@@ -1,9 +1,12 @@
 <h2>Signup</h2>
 
-FirstName : <input type="text" /><Br><BR>
+FirstName : <input type="text" [(ngModel)]="firstName"  /><Br><BR>
 
-Email : <input type="text" /><Br><BR>
+Email : <input type="text" [(ngModel)]="email" /><Br><BR>
 
-Password : <input type="text"/><br><br>
+Password : <input type="text" [(ngModel)]="password" /><br><br>
 
-<input type="button" value="Signup"/>
+<input type="button" (click)="signup()" value="Signup"/>
+<br><br>
+
+{{name}}
