@@ -22,8 +22,6 @@ export class SignupComponent implements OnInit {
   signup() {
     console.log(this.firstName);
     console.log(this.email);
-    console.log(this.password);
-    
-    
+    console.log(this.password);  
   }
 }
