@@ -49,3 +49,67 @@ export class SignupComponent {
     }
 
 }
+
+
+npm --> node_modules 
+
+
+
+FormsModule 
+
+[(ngModel)]="firstName"
+
+
+angular is frontend framework we need rest api to store data into db 
+we will use spring boot - rest api 
+
+server 9999
+
+POST
+http://localhost:9999/signup
+  firstName
+  email
+  password
+
+dao -> db 
+service -> rest api calling 
+
+
+service -> class -> singleton 
+.ts -> class -> @Injectable -> manuall -> IoC -> DI -> 
+@Autowired 
+SessionService service 
+via constructor injection 
+
+ng generate service session 
+ng g s session 
+
+inside service
+  ng g s service/session 
+
+
+service -> rest api -> calling -> httpclient -> HttpClient 
+
+
+java --sync 
+------
+add() // 5 minute 
+sub() //  2 minute 
+mul()// 1 minute 
+-----------------------8 minute
+
+
+js --async 
+------
+add() // 5 minute 
+sub() //  2 minute 
+mul()// 1 minute 
+//process 
+-----------------------5 minute
+
+
+CORS --> backend server -> 9999 
+         request=> backend -> 4200
+
+
+npm install ngx-toastr@14.3.0 --save

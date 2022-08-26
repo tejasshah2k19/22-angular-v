@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { SessionService } from '../service/session.service';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +13,7 @@ export class SignupComponent implements OnInit {
   email: string = ""//instance 
   firstName: string = ""
   password: string = ""
-  constructor() { }
+  constructor(private sessionService: SessionService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +24,16 @@ export class SignupComponent implements OnInit {
   signup() {
     console.log(this.firstName);
     console.log(this.email);
-    console.log(this.password);  
+    console.log(this.password);
+    let user = { "firstName": this.firstName, "email": this.email, "password": this.password }
+    this.sessionService.signupApi(user).subscribe(resp => {
+      console.log(resp);
+      this.toastr.success("User added....")
+    }, err => {
+      console.log(err);
+
+    })
+
+
   }
 }
