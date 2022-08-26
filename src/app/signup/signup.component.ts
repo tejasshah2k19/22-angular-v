@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { SessionService } from '../service/session.service';
 
@@ -13,7 +14,7 @@ export class SignupComponent implements OnInit {
   email: string = ""//instance 
   firstName: string = ""
   password: string = ""
-  constructor(private sessionService: SessionService,private toastr:ToastrService) { }
+  constructor(private sessionService: SessionService,private toastr:ToastrService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -29,6 +30,7 @@ export class SignupComponent implements OnInit {
     this.sessionService.signupApi(user).subscribe(resp => {
       console.log(resp);
       this.toastr.success("User added....")
+      this.router.navigateByUrl("/listuser")
     }, err => {
       console.log(err);
 

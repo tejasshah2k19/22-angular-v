@@ -113,3 +113,11 @@ CORS --> backend server -> 9999
 
 
 npm install ngx-toastr@14.3.0 --save
+
+
+RequestDisptacher
+response.sendRedirect 
+return "" 
+
+Router -> navigate 
+
