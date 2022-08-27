@@ -15,7 +15,7 @@ export class SessionService {
   //Observable 
   //Promise 
   signupApi(user: any): Observable<any> {
-    return this.httpClient.post("http://localhost:9999/signup", user)
+    return this.httpClient.post("https://healthy-me-rest-api.herokuapp.com/saveuser", user)
   }
 
 }
