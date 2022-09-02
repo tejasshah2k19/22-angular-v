@@ -12,6 +12,7 @@ import { HttpClientModule} from "@angular/common/http"
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ListUserComponent } from './list-user/list-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListUserComponent } from './list-user/list-user.component';
     LoginComponent,
     DashboardComponent,
     NotFoundComponent,
-    ListUserComponent
+    ListUserComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

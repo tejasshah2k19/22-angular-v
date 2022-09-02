@@ -5,10 +5,16 @@
     <tr>
         <td>UserId</td>
         <td>firstName</td>
+        <td>Action</td>
     </tr>
 
     <tr *ngFor="let u of users">
         <td>{{u.userId}}</td>
         <td>{{u.firstName}}</td>
+        <td>
+            <span class="fakelink" (click)="deleteUser(u.userId)">Delete</span>  |
+            <a routerLink="/edituser/{{u.userId}}" class="fakelink">Edit User</a>
+        
+        </td>
     </tr>
 </table> 

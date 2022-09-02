@@ -1,1 +1,9 @@
-<p>login works!</p>
+<h2>Login</h2>
+ 
+
+Email : <input type="text" [(ngModel)]="email" class="form-control" />
+
+Password : <input type="text" [(ngModel)]="password" class="form-control" />
+<br>
+<input type="button" (click)="login()" value="Login" class="btn btn-primary" />
+
