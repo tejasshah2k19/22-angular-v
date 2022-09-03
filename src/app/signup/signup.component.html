@@ -1,4 +1,7 @@
-         <h2>Signup</h2>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <h2>Signup</h2>
 
         FirstName : <input type="text" class="form-control" [(ngModel)]="firstName" />
 
@@ -7,5 +10,7 @@
         Password : <input type="text" [(ngModel)]="password" class="form-control" />
         <br>
         <input type="button" (click)="signup()" value="Signup" class="btn btn-primary" />
-
-  
+        <br>
+        <a routerLink="/login">Login</a>
+    </div>
+</div>

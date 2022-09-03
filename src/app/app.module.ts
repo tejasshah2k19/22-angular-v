@@ -13,6 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ListUserComponent } from './list-user/list-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { UserLayoutComponent } from './user-layout/user-layout.component';
+import { HeaderComponent } from './user/header/header.component';
+import { SidebarComponent } from './user/sidebar/sidebar.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     DashboardComponent,
     NotFoundComponent,
     ListUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    UserLayoutComponent,
+    HeaderComponent,
+    SidebarComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

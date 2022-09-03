@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../service/user.service';
+import { UserDataService } from '../user-data.service';
 
 @Component({
   selector: 'app-list-user',
@@ -9,7 +11,7 @@ import { UserService } from '../service/user.service';
 })
 export class ListUserComponent implements OnInit {
 
-  constructor(private userService: UserService,private toastr:ToastrService) {
+  constructor(private userService: UserService, private toastr: ToastrService) {
 
 
   }
@@ -18,6 +20,7 @@ export class ListUserComponent implements OnInit {
   ngOnInit(): void {
 
     this.getAllUsers();
+
   }
   getAllUsers() {
     this.userService.getAllUserApi().subscribe(resp => {
@@ -28,21 +31,21 @@ export class ListUserComponent implements OnInit {
   }
 
 
-  deleteUser(userId:any){
-    this.userService.deleteUserApi(userId).subscribe(resp=>{
-        this.toastr.success(resp.msg);
+  deleteUser(userId: any) {
+    this.userService.deleteUserApi(userId).subscribe(resp => {
+      this.toastr.success(resp.msg);
 
 
-        this.users = this.users.filter(u=>u.userId != userId)
-   
-        // for(let i=0;i<this.users.length;i++){
-        //     if(this.users[i].userId == userId){
+      this.users = this.users.filter(u => u.userId != userId)
 
-        //     }
-        // }
-        //this.getAllUsers()
+      // for(let i=0;i<this.users.length;i++){
+      //     if(this.users[i].userId == userId){
+
+      //     }
+      // }
+      //this.getAllUsers()
     })
-   }
+  }
 }
 
 
