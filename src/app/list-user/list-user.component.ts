@@ -11,6 +11,7 @@ import { UserDataService } from '../user-data.service';
 })
 export class ListUserComponent implements OnInit {
 
+  disable=false
   constructor(private userService: UserService, private toastr: ToastrService) {
 
 
@@ -46,6 +47,15 @@ export class ListUserComponent implements OnInit {
       //this.getAllUsers()
     })
   }
+  callme(){
+      this.disable = true 
+       
+      setTimeout(()=>{
+        this.disable  = false
+      },5000)
+
+  }
+  
 }
 
 

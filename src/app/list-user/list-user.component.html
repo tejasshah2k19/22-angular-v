@@ -12,9 +12,16 @@
         <td>{{u.userId}}</td>
         <td>{{u.firstName}}</td>
         <td>
-            <span class="fakelink" (click)="deleteUser(u.userId)">Delete</span>  |
+         
+            <span class="fakelink" (click)="deleteUser(u.userId)" >Delete</span>  |
+         
             <a routerLink="/user/edituser/{{u.userId}}" class="fakelink">Edit User</a>
-        
+            |
+            <button type="button" (click)="callme()">Toggle</button>
+            |
+            <button type="button" class="btn btn-info"   [disabled]="disable">Hey</button>
+            |
+            {{disable}}
         </td>
     </tr>
 </table> 

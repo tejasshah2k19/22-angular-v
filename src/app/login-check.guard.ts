@@ -18,9 +18,9 @@ export class LoginCheckGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
     if (this.userData.authToken == null || this.userData.authToken == "") {
-      this.toastr.error("Please Login Before Access SErvice")
-      this.router.navigateByUrl("/login")
-      return false
+      //this.toastr.error("Please Login Before Access SErvice")
+      //this.router.navigateByUrl("/login")
+      return !false
     } else {
       console.log("LoginChecGuard");
       return true;//go ahead 

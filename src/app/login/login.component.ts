@@ -26,8 +26,19 @@ export class LoginComponent implements OnInit {
           if(resp.status == -1){
             this.toaster.error(resp.msg);
           }else{
-             this.userData.authToken = resp.data.authToken 
-             console.log(this.userData.authToken);
+     
+              let userId = this.userData.userId 
+
+              //this.orderService.getAllOrders(userId).subscribe(resp=>{
+                  //this.orders = resp.data 
+                  //second
+                      // 
+                          // final 
+              //})
+
+              //second 
+              this.userData.authToken = resp.data.authToken 
+              console.log(this.userData.authToken);
               
             this.toaster.success(resp.msg);
             //go to list page 
