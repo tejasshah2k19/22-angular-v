@@ -147,3 +147,14 @@ ActivatedRoute
 
 Guard -> back goahead => filter -> every time 
 
+---------------------------------------------------------
+pipe => print data -> format 
+
+price : 
+
+12,000 
+12000
+$12000
+Rs12000
+
+currency 

@@ -8,6 +8,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserLayoutComponent } from './user-layout/user-layout.component';
+import { PipeDemoComponent } from './user/pipe-demo/pipe-demo.component';
 
 const routes: Routes = [
 
@@ -19,6 +20,7 @@ const routes: Routes = [
     path: "user", component: UserLayoutComponent, children: [
       { path: "listuser", component: ListUserComponent },
       { path: "edituser/:userId", component: EditUserComponent },
+      { path: "pipedemo", component: PipeDemoComponent }
 
     ], canActivate: [LoginCheckGuard]
   },

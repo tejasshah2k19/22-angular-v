@@ -26,7 +26,11 @@ export class LoginComponent implements OnInit {
           if(resp.status == -1){
             this.toaster.error(resp.msg);
           }else{
-     
+              //nginit 
+              //1 api
+              //2 api 
+              //login 
+              
               let userId = this.userData.userId 
 
               //this.orderService.getAllOrders(userId).subscribe(resp=>{
